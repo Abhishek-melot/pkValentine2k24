@@ -1,12 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>pkValentine2k24</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="./assets/Header.png" alt="Header" />
+
+      <button class="guide-button" onclick="showDialog()">
+        <img src="./assets/Rules-Button.png" alt="Rules-Button" />
+      </button>
+      <dialog id="modal">
+        <div class="howToPlay">
+          <div >
+            <ul style="max-height: 73vw;">
+              <li>
+                1.) For participation, top talent in the different categories (8
+                for Shayari and 12 for Singers) must register their IDs with SK
+                employees.
+              </li>
+              <li>
+                2.) The PK Battle will be held during Valentine's Week, the
+                schedule will be confirmed by the admin.
+              </li>
+              <li>
+                3.) Talents need to come live before 15min of the PK Battle,
+                15min Official Pk will be scheduled for the event.
+              </li>
+              <li>
+                4.) The First Talent to the left on the webpage schedule, will
+                start the performance first and will perform for first 5 – 6
+                Min, then next talent will perform for 5 – 6 Min and it must be
+                related to love.
+              </li>
+              <li>
+                5.) Talents and Users will be ranked on the leaderboard based on
+                the beans received and spent on the event respectively.
+              </li>
+              <li>
+                6.) Talents with maximum beans received from ROUND 1 will
+                proceed to ROUND 2 in each category.
+              </li>
+              <li>
+                7.) Rankings will be separate for Round 1 and round 2. Earnings
+                of Round 1 will not be counted towards ROUND 2.
+              </li>
+              <li>
+                8.) Will have 1 winner based on maximum beans received in ROUND
+                2 will be mentioned in the BANNER for 3 days
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <button class="close" onclick="closeDialog()">
+          <img src="./assets/Close-Icon.png" alt="close" />
+        </button>
+      </dialog>
+    </header>
+    <main>
+          <!-- Rewards section -->
+      <section class="tab-btns-section">
+        <div class="tab-btns">
+          <button class="user active tab"></button>
+          <button class="talent tab"></button>
+        </div>
+
+        <!-- User round-1 and round-2 -->
+        <div class="tab-content active">
+          <div data-current="0" class="rewards">
+            <div class="reward-top">
+              <span style="color: #fff;">TOP 1</span>
+              <img src="./assets/ranking bg.png " alt="rankdisplay" />
+            </div>
+
+            <button class="arrow left">
+              <img src="./assets/Right-Button.png" alt="right-arrow" />
+            </button>
+
+            <div class="prizes-1 active">
+              <div class="stage">
+                <img src="./assets/Beans-Pot.png" alt="beans-pot" />
+              </div>
+            </div>
+            <div class="prizes-1">
+              <div class="stage">
+                <img src="./assets/Beans-Pot.png" alt="beans-pot" />
+              </div>
+            </div>
+            <div class="prizes-1">
+              <div class="stage">
+                <img src="./assets/Beans-Pot.png" alt="beans-pot" />
+              </div>
+            </div>
+            <div class="prizes-1">
+              <div class="stage">
+                <img src="./assets/Beans-Pot.png" alt="beans-pot" />
+              </div>
+            </div>
+            <div class="prizes-1">
+              <div class="stage">
+                <img src="./assets/Beans-Pot.png" alt="beans-pot" />
+              </div>
+            </div>
+
+            <button class="arrow right">
+              <img src="./assets/Left-Button.png" alt="left-arrow" />
+            </button>
+
+            <p class="reward-text">User recieves total 25% of the beans pot.</p>
+          </div>
+        </div>
+
+        <div class="tab-content">
+          <div class="reward-round-btns">
+            <button class="round-1 active"></button>
+            <button class="round-2"></button>
+          </div>
+
+          <!-- Round-1 caraousel -->
+          <div data-current="0" class="rewards talent-rewards r1 active">
+            <div class="reward-top reward-top1">
+              <span>05 Million & Above Gems</span>
+            </div>
+
+            <button class="arrow left left-1">
+              <img src="./assets/Right-Button.png" alt="right-arrow" />
+            </button>
+
+            <div class="prizesR1 active">
+              <div class="stage stage1">
+                <img src="./assets/PK battle Sudio room.png" alt="beans-pot" />
+                <img src="./assets/PK super star Frame.png" alt="beans-pot" />
+              </div>
+            </div>
+            <div class="prizesR1">
+              <div class="stage">
+                <img src="./assets/PK battle Sudio room.png" alt="beans-pot" />
+              </div>
+            </div>
+            <div class="prizesR1">
+              <div class="stage">
+                <img src="./assets/PK battle Sudio room.png" alt="beans-pot" />
+              </div>
+            </div>
+            <div class="prizesR1">
+              <div class="stage">
+                <img src="./assets/PK battle Sudio room.png" alt="beans-pot" />
+              </div>
+            </div>
+
+            <button class="arrow right right-1">
+              <img src="./assets/Left-Button.png" alt="left-arrow" />
+            </button>
+
+            <p class="reward-text reward-text-1">
+              10 Days Audio Room theme + Profile Frame
+            </p>
+          </div>
+          <!-- Round-2 caraousel -->
+          <div data-current="0" class="rewards talent-rewards r2">
+            <div class="reward-top reward-top2">
+              <span>10 Million & Above Gems</span>
+            </div>
+
+            <button class="arrow left left-2">
+              <img src="./assets/Right-Button.png" alt="left-arrow" />
+            </button>
+
+            <div class="prizesR2 active">
+              <div class="stage stage1 stage2">
+                <img src="./assets/pkSuperstarBadge.png" alt="pkSuperstarBadge" />
+                <img
+                  src="./assets/PK super star Frame.png"
+                  alt="superstar frame"
+                />
+                <img
+                  src="./assets/PK battle Sudio room.png"
+                  alt="pk-studio-room"
+                />
+              </div>
+            </div>
+            <div class="prizesR2">
+              <div class="stage stage1">
+                <img
+                  src="./assets/PK battle Sudio room.png"
+                  alt="pk-studio-room"
+                />
+                <img
+                  src="./assets/PK super star Frame.png"
+                  alt="superstar frame"
+                />
+              </div>
+            </div>
+            <div class="prizesR2">
+              <div class="stage">
+                <img
+                  src="./assets/PK battle Sudio room.png"
+                  alt="pk-studio-room"
+                />
+              </div>
+            </div>
+            <div class="prizesR2">
+              <div class="stage">
+                <img src="./assets/PK battle Sudio room.png" alt="beans-pot" />
+              </div>
+            </div>
+
+            <button class="arrow right right-2">
+              <img src="./assets/Left-Button.png" alt="right-arrow" />
+            </button>
+
+            <p class="reward-text reward-text-2">
+              15 days PK SUPER STAR BADGE +
+              <br />
+              Audio theme of PK SuperStar +
+              <br />
+              PK SuperStar Profile Frame
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./js/script.js"></script>
+  </body>
 </html>

@@ -225,20 +225,20 @@ body {
   justify-content: space-between;
   padding: 0 8vw;
   position: relative;
-  min-height: 60vh;
+  min-height: 55vh;
   margin-top: 20px;
 }
 .arrow {
-  max-width: 10vw;
+  max-width: 14vw;
   position: absolute;
   top: 50%;
   z-index: 1;
 }
 .arrow.left {
-  left: 15vw;
+  left: 12vw;
 }
 .arrow.right {
-  right: 18vw;
+  right: 13vw;
 }
 .arrow img {
   width: 100%;
@@ -359,3 +359,114 @@ body {
     no-repeat;
   transform: scale(1.2);
 }
+
+/* ----- Reward section styling ----- */
+
+
+/* -----Schedule section styling----- */
+
+.schedule-table {
+  margin-top: 25vw;
+}
+
+.tab-btns-schedule , .tab-categories{
+  background: url("../assets/Slide\ button\ bg.png") center/100% 100% no-repeat;
+  width: 90%;
+  height: 12vw;
+  margin: auto;
+  margin-top: 4vw;
+  display: flex;
+  justify-content: space-between;
+  gap: 5vw;
+  margin-bottom: 3vw;
+}
+
+.singing.active {
+  background: url("../assets/Singing-Battle.png") center/100% 100% no-repeat;
+  transform: scale(1.3);
+}
+.fashion.active {
+  background: url("../assets/Shayari-Battle.png") center/100% 100% no-repeat;
+  transform: scale(1.3);
+}
+
+.schedule-bg {
+  display: none;
+  background: url("../assets/Schedule.png") center/100% 100% no-repeat;
+  /* height: 50vh;
+  max-height: 400px; */
+}
+.schedule-bg.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1vw;
+  padding-top: 20vw;
+  padding-bottom: 15vw;
+}
+.talent-rewards2 {
+  display: none;
+}
+.talent-rewards2.active {
+  display: block;
+}
+
+.row {
+  background: url("../img/4th\ name\ onwards\ strip.png") center/100% 100%
+    no-repeat;
+  width: 75%;
+  display: flex;
+  align-items: center;
+  color: goldenrod;
+  justify-content: center;
+  padding: 1vw;
+}
+.vs {
+  max-width: 5vw;
+}
+.vs img {
+  width: 100%;
+}
+/* .player-datas{
+  font-size: 2.5vw;
+}
+.player-datas p{
+  font-size: 2.5vw;
+  margin: 0;
+}
+.player-datas a{
+  text-decoration: none;
+  color: gold;
+} */
+
+#table-data {
+  display: grid;
+  grid-template-columns: 17% 31% auto 31% 14%;
+  font-size: 2vw;
+  margin: 0vw auto;
+  background-image: url("../img/4th\ name\ onwards\ strip.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-items: center;
+  padding-top: 1vw;
+  font-weight: bold;
+  color: goldenrod;
+  margin-top: 0vw;
+  width: 70%;
+  padding-bottom: 2vw;
+}
+
+#table-data a {
+  text-decoration: none;
+  color: goldenrod;
+}
+.date {
+  margin: 0vw auto;
+  width: 100%;
+  font-size: 2vw;
+  text-align: center;
+}
+
+

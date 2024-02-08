@@ -192,7 +192,7 @@ leftArrow1.addEventListener("click", () => {
 
 // Talent Rewards Round-2
 const TalentRewardR2 = [
-  "15 days PK SUPER STAR BADGE + Audio theme of PK SuperStar + PK SUperStar Profile Frame",
+  "15 days PK SUPER STAR BADGE + <br/> Audio theme of PK SuperStar + <br/> PK SUperStar Profile Frame",
   "10 days Audio theme of PK SuperStar + <br/> PK SUperStar Profile Frame",
   "07 days Audio theme of PK SuperStar ",
   "5 days Audio theme of PK SuperStar ",

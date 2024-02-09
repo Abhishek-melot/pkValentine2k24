@@ -257,3 +257,98 @@ leftArrow2.addEventListener("click", () => {
   rewardContainer2.setAttribute("data-current", currentId2);
   rewardText2.innerHTML = TalentRewardR2[currentId2];
 });
+
+// Schedule content
+
+const tabs1 = document.querySelectorAll(".tab1");
+const scontent = document.querySelectorAll(".talent-rewards2");
+console.log(scontent)
+tabs1.forEach((tab, i) => {
+  tab.addEventListener("click", () => {
+    tabs1.forEach((t) => {
+      t.classList.remove("active");
+    });
+
+    scontent.forEach((c, ci) => {
+      if (i === ci) {
+        c.classList.add("active");
+      } else {
+        c.classList.remove("active");
+      }
+    });
+
+    tab.classList.add("active");
+  });
+});
+
+
+
+// Schedule Round buttons Shayari
+
+const shayariRounds = document.querySelectorAll("#shayari .schedule-round-btns button");
+const shayariContent = document.querySelectorAll(".shayari");
+shayariRounds.forEach((tab, i) => {
+  console.log(tab);
+  tab.addEventListener("click", () => {
+    shayariRounds.forEach((t) => {
+      t.classList.remove("active");
+    });
+
+    shayariContent.forEach((c, ci) => {
+      if (i === ci) {
+        c.classList.add("active");
+      } else {
+        c.classList.remove("active");
+      }
+    });
+    tab.classList.add("active");
+  });
+});
+
+// Schedule Round buttons Singing
+
+const singingRounds = document.querySelectorAll("#singing .schedule-round-btns button");
+console.log(singingRounds);
+const singingContent = document.querySelectorAll(".singing-content");
+console.log(singingContent);
+singingRounds.forEach((tab, i) => {
+  console.log(tab);
+  tab.addEventListener("click", () => {
+    singingRounds.forEach((t) => {
+      t.classList.remove("active");
+    });
+
+    singingContent.forEach((c, ci) => {
+      if (i === ci) {
+        c.classList.add("active");
+      } else {
+        c.classList.remove("active");
+      }
+    });
+    tab.classList.add("active");
+  });
+});
+
+
+
+
+// const tabs2 = document.querySelectorAll(".tab-btns-schedule button");
+// const scontent2 = document.querySelectorAll(".talent-rewardsR2 > div");
+// console.log(scontent2)
+// tabs2.forEach((tab, i) => {
+//   tab.addEventListener("click", () => {
+//     tabs2.forEach((t) => {
+//       t.classList.remove("active");
+//     });
+
+//     scontent2.forEach((c, ci) => {
+//       if (i === ci) {
+//         c.classList.add("active");
+//       } else {
+//         c.classList.remove("active");
+//       }
+//     });
+
+//     tab.classList.add("active");
+//   });
+// });

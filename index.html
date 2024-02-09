@@ -64,12 +64,13 @@
     <main>
       <!-- Rewards section -->
       <section class="tab-btns-section">
+        <!-- User and talent buttons -->
         <div class="tab-btns">
           <button class="user active tab"></button>
           <button class="talent tab"></button>
         </div>
 
-        <!-- User round-1 and round-2 -->
+        <!-- User rewards -->
         <div class="tab-content active">
           <div data-current="0" class="rewards">
             <div class="reward-top">
@@ -114,7 +115,7 @@
             <p class="reward-text">User recieves total 25% of the beans pot.</p>
           </div>
         </div>
-
+        <!-- Talent rewards for round-1 and round-2 -->
         <div class="tab-content">
           <div class="reward-round-btns">
             <button class="round-1 active"></button>
@@ -231,61 +232,47 @@
       <!-- Schedule section -->
       <section class="schedule-table">
         <!-- Schedule tabs -->
-        <div class="tab-btns-schedule">
-          <button class="fashion active tab1 tab2"></button>
-          <button class="singing  tab1 tab2"></button>
-        </div>
-
-        <!-- round btns -->
-        <div class="schedule-round-btns">
-          <button class="round-1"></button>
-          <button class="round-2 active"></button>
-        </div>
-
-        <!-- Round-1 schedule content-->
-        <div class="talent-rewards2">
-          <div class="dancingR1 schedule-contentR1 schedule-bg">
-            <div id="table-data">
-              <div class="date">25/12/2023</div>
-              <div>
-                <span style="vertical-align: inherit">
-                  <span style="vertical-align: inherit"> 𝐉𝐀𝐀𝐍𝐔 💋 </span>
-                </span>
-                <br />
-                <span style="vertical-align: inherit">
-                  <span style="vertical-align: inherit">ID: </span>
-                </span>
-                <a href="http://www.kktv1.com/m/?roomid=644707786">
-                  <span style="vertical-align: inherit">
-                    <span style="vertical-align: inherit"> 644707786 </span>
-                  </span>
-                </a>
-              </div>
-              <img class="vs" src="./img/VS.png" />
-              <div>
-                <span style="vertical-align: inherit"
-                  ><span style="vertical-align: inherit">Aliya❤❤❤ </span></span
-                ><br /><span style="vertical-align: inherit"
-                  ><span style="vertical-align: inherit">ID: </span></span
-                ><a href="http://www.kktv1.com/m/?roomid=584260474"
-                  ><span style="vertical-align: inherit"
-                    ><span style="vertical-align: inherit"
-                      >584260474</span
-                    ></span
-                  ></a
-                >
-              </div>
-              <div>
-                <font style="vertical-align: inherit"
-                  ><font style="vertical-align: inherit"
-                    >22:00-22:15 IST</font
-                  ></font
-                >
-              </div>
+        <div class="tab-btns-schedule" style="position: relative">
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              position: absolute;
+              max-width: 83%;
+              gap: 11vw;
+              top: 3.5vw;
+              left: 7vw;
+            "
+          >
+            <div style="height: 8vw">
+              <img
+                style="width: 100%"
+                src="./assets/Shayari unselected text.png"
+                alt="shayari-unselected"
+              />
+            </div>
+            <div style="height: 8vw">
+              <img
+                style="width: 100%"
+                src="./assets/Singing unselected text.png"
+                alt="singing-unselected"
+              />
             </div>
           </div>
+          <button class="fashion active tab1 tab2"></button>
+          <button class="singing tab1 tab2"></button>
+        </div>
 
-          <div class="singingR1 schedule-bg">
+        <!-- Shayari Schedule  content-->
+        <div id="shayari" class="talent-rewards2 active">
+          <!-- round btns -->
+          <div class="schedule-round-btns">
+            <button class="round-1 active"></button>
+            <button disabled class="round-2"></button>
+          </div>
+
+          <div class="shayari schedule-bg active">
+            
             <div id="table-data">
               <div class="date">25/12/2023</div>
               <div>
@@ -303,7 +290,7 @@
                   ></a
                 >
               </div>
-              <img class="vs" src="./img/VS.png" />
+              <img class="vs" src="./assets/VS.png" />
               <div>
                 <font style="vertical-align: inherit"
                   ><font style="vertical-align: inherit"
@@ -344,7 +331,7 @@
                   ></a
                 >
               </div>
-              <img class="vs" src="./img/VS.png" />
+              <img class="vs" src="./assets/VS.png" />
               <div>
                 <font style="vertical-align: inherit"
                   ><font style="vertical-align: inherit"
@@ -385,7 +372,7 @@
                   ></a
                 >
               </div>
-              <img class="vs" src="./img/VS.png" />
+              <img class="vs" src="./assets/VS.png" />
               <div>
                 <font style="vertical-align: inherit"
                   ><font style="vertical-align: inherit">
@@ -425,7 +412,7 @@
                   </font>
                 </a>
               </div>
-              <img class="vs" src="./img/VS.png" />
+              <img class="vs" src="./assets/VS.png" />
               <div>
                 <font style="vertical-align: inherit">
                   <font style="vertical-align: inherit">
@@ -465,7 +452,7 @@
                   ></a
                 >
               </div>
-              <img class="vs" src="./img/VS.png" />
+              <img class="vs" src="./assets/VS.png" />
               <div>
                 <font style="vertical-align: inherit">
                   <font style="vertical-align: inherit">🎤 DILNASHI ❤️</font>
@@ -488,7 +475,7 @@
             </div>
           </div>
 
-          <div class="fashionR1 schedule-bg active">
+          <div class="shayari schedule-bg ">
             <div id="table-data">
               <div class="date">25/12/2023</div>
               <div>
@@ -506,7 +493,7 @@
                   ></a
                 >
               </div>
-              <img class="vs" src="./img/VS.png" />
+              <img class="vs" src="./assets/VS.png" />
               <div>
                 <span style="vertical-align: inherit"
                   ><span style="vertical-align: inherit"
@@ -547,7 +534,7 @@
                   ></a
                 >
               </div>
-              <img class="vs" src="./img/VS.png" />
+              <img class="vs" src="./assets/VS.png" />
               <div>
                 <font style="vertical-align: inherit"
                   ><font style="vertical-align: inherit">janviG </font></font
@@ -586,7 +573,7 @@
                   ></a
                 >
               </div>
-              <img class="vs" src="./img/VS.png" />
+              <img class="vs" src="./assets/VS.png" />
               <div>
                 <font style="vertical-align: inherit"
                   ><font style="vertical-align: inherit">🅼🅾🅽🅸🆂🅷🅰🕉️ </font></font
@@ -611,10 +598,15 @@
           </div>
         </div>
 
-        <!-- Round-2  schedule content-->
-        <div class="talent-rewards2 talent-rewardsR2 active">
-          <div class="dancingR2 schedule-bg">Dancing schedule</div>
-          <div class="singingR2 schedule-bg">
+        <!-- Singing schedule content-->
+        <div id="singing" class="talent-rewards2 talent-rewardsR2">
+          <!-- round btns -->
+          <div class="schedule-round-btns">
+            <button class="round-1 active"></button>
+            <button disabled class="round-2"></button>
+          </div>
+          <!-- Singing schedule content -->
+          <div class="singing-content schedule-bg active">
             <div id="table-data">
               <div class="date">27/12/2023</div>
               <div>
@@ -632,7 +624,7 @@
                   ></a
                 >
               </div>
-              <img class="vs" src="./img/VS.png" />
+              <img class="vs" src="./assets/VS.png" />
               <div>
                 <span style="vertical-align: inherit"
                   ><span style="vertical-align: inherit"
@@ -673,7 +665,7 @@
                   ></a
                 >
               </div>
-              <img class="vs" src="./img/VS.png" />
+              <img class="vs" src="./assets/VS.png" />
               <div>
                 <span style="vertical-align: inherit"
                   ><span style="vertical-align: inherit"
@@ -716,7 +708,7 @@
                   ></a
                 >
               </div>
-              <img class="vs" src="./img/VS.png" />
+              <img class="vs" src="./assets/VS.png" />
               <div>
                 <span style="vertical-align: inherit"
                   ><span style="vertical-align: inherit"
@@ -757,7 +749,7 @@
                   ></a
                 >
               </div>
-              <img class="vs" src="./img/VS.png" />
+              <img class="vs" src="./assets/VS.png" />
               <div>
                 <span style="vertical-align: inherit"
                   ><span style="vertical-align: inherit">PARI ❤️❤️ </span></span
@@ -780,7 +772,7 @@
               </div>
             </div>
           </div>
-          <div class="fashionR2 schedule-bg active">
+          <div class="singing-content schedule-bg ">
             <div id="table-data">
               <div class="date">27/12/2023</div>
               <div>
@@ -798,7 +790,7 @@
                   ></a
                 >
               </div>
-              <img class="vs" src="./img/VS.png" />
+              <img class="vs" src="./assets/VS.png" />
               <div>
                 <span style="vertical-align: inherit"
                   ><span style="vertical-align: inherit"
@@ -839,7 +831,7 @@
                   ></a
                 >
               </div>
-              <img class="vs" src="./img/VS.png" />
+              <img class="vs" src="./assets/VS.png" />
               <div>
                 <span style="vertical-align: inherit"
                   ><span style="vertical-align: inherit"
@@ -880,7 +872,7 @@
                   ></a
                 >
               </div>
-              <img class="vs" src="./img/VS.png" />
+              <img class="vs" src="./assets/VS.png" />
               <div>
                 <span style="vertical-align: inherit"
                   ><span style="vertical-align: inherit">PATHE </span></span
@@ -906,6 +898,7 @@
         </div>
       </section>
     </main>
+   
     <script src="./js/script.js"></script>
   </body>
 </html>

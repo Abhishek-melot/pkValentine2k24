@@ -340,8 +340,8 @@ body {
 }
 
 .tab1 {
-  width: 25%;
-  height: 50px;
+  width: 45%;
+  height: 33px;
   margin-top: 4px;
 }
 .dancing.active, .tab-categories .dancingL.active{
@@ -366,12 +366,12 @@ body {
 /* -----Schedule section styling----- */
 
 .schedule-table {
-  margin-top: 25vw;
+  margin-top: 10vw;
 }
 
 .tab-btns-schedule , .tab-categories{
   background: url("../assets/Slide\ button\ bg.png") center/100% 100% no-repeat;
-  width: 90%;
+  width: 70%;
   height: 12vw;
   margin: auto;
   margin-top: 4vw;
@@ -385,6 +385,7 @@ body {
   background: url("../assets/Singing-Battle.png") center/100% 100% no-repeat;
   transform: scale(1.3);
 }
+
 .fashion.active {
   background: url("../assets/Shayari-Battle.png") center/100% 100% no-repeat;
   transform: scale(1.3);
@@ -445,14 +446,14 @@ body {
   grid-template-columns: 17% 31% auto 31% 14%;
   font-size: 2vw;
   margin: 0vw auto;
-  background-image: url("../img/4th\ name\ onwards\ strip.png");
+  background-image: url("../assets/schedule\ strip.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   align-items: center;
   justify-items: center;
   padding-top: 1vw;
   font-weight: bold;
-  color: goldenrod;
+  color: #fff;
   margin-top: 0vw;
   width: 70%;
   padding-bottom: 2vw;
@@ -460,7 +461,7 @@ body {
 
 #table-data a {
   text-decoration: none;
-  color: goldenrod;
+  color: #fff;
 }
 .date {
   margin: 0vw auto;
@@ -470,3 +471,11 @@ body {
 }
 
 
+/* Footer */
+
+footer img {
+  width: 100%;
+  position: absolute;
+  bottom: -18vw;
+  z-index: -1;
+}

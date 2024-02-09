@@ -341,7 +341,7 @@ body {
 
 .tab1 {
   width: 45%;
-  height: 33px;
+  height: 10vw;
   margin-top: 4px;
 }
 .dancing.active, .tab-categories .dancingL.active{

@@ -71,7 +71,7 @@ body {
     align-items: center;
     background: url("../assets/Event-Details.png");
     background-size: 100% 100%;
-    min-height: 65vh;
+    min-height: 55vh;
     justify-content: center;
     background-repeat: no-repeat;
     padding: 9vw 0;

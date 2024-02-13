@@ -260,7 +260,8 @@ leftArrow2.addEventListener("click", () => {
 
 // Schedule content
 
-const tabs1 = document.querySelectorAll(".tab1");
+const tabs1 = document.querySelectorAll(".tab-btns-schedule .tab1");
+console.log(tabs1)
 const scontent = document.querySelectorAll(".talent-rewards2");
 console.log(scontent)
 tabs1.forEach((tab, i) => {
@@ -352,3 +353,244 @@ singingRounds.forEach((tab, i) => {
 //     tab.classList.add("active");
 //   });
 // });
+
+// Leaderboard user talent tabs switching.
+
+const tabs3 = document.querySelectorAll(" .tab3");
+let lcontent = document.querySelectorAll(".leaderboard-content");
+// console.log(tabs3);
+// console.log(lcontent)
+tabs3.forEach((tab, i) => {
+  console.log(tabs3.length);
+  tab.addEventListener("click", () => {
+    tabs3.forEach((t) => {
+      t.classList.remove("active");
+    });
+
+    lcontent.forEach((c, ci) => {
+      if (i === ci) {
+        c.classList.add("active");
+      } else {
+        c.classList.remove("active");
+      }
+    });
+    tab.classList.add("active");
+  });
+});
+
+// Leaderboard rounds btns switching
+
+const roundBtnsL = document.querySelectorAll(
+  ".leaderboard-content-user .leaderboard-round-btns button"
+);
+const leaderboardContentUser = document.querySelectorAll(
+  ".leaderboard-content-user .leaderboard"
+);
+// console.log(roundBtnsL);
+// console.log(leaderboardContentUser)
+roundBtnsL.forEach((tab, i) => {
+  console.log(tab);
+  tab.addEventListener("click", () => {
+    roundBtnsL.forEach((t) => {
+      t.classList.remove("active");
+    });
+
+    leaderboardContentUser.forEach((c, ci) => {
+      if (i === ci) {
+        c.classList.add("active");
+      } else {
+        c.classList.remove("active");
+      }
+    });
+    tab.classList.add("active");
+  });
+});
+
+
+const roundBtnsL1 = document.querySelectorAll(".leaderboard-content-talent .leaderboard-round-btns button");
+const leaderboardContentTalent = document.querySelectorAll(".leaderboard-content-talent .leaderboard-wrapper");
+
+console.log(roundBtnsL1);
+console.log(leaderboardContentTalent);
+roundBtnsL1.forEach((tab, i) => {
+  console.log(tab);
+  tab.addEventListener("click", () => {
+    roundBtnsL1.forEach((t) => {
+      t.classList.remove("active");
+    });
+
+    leaderboardContentTalent.forEach((c, ci) => {
+      if (i === ci) {
+        c.classList.add("active");
+      } else {
+        c.classList.remove("active");
+      }
+    });
+    tab.classList.add("active");
+  });
+});
+
+const tabsL = document.querySelectorAll("#leaderboard-category .tab-categories button");
+console.log(tabsL)
+const scontent3 = document.querySelectorAll(".leaderboard-content-talent .leaderboard-wrapper .l-round1 ");
+console.log(scontent3)
+tabsL.forEach((tab, i) => {
+  tab.addEventListener("click", () => {
+    tabsL.forEach((t) => {
+      t.classList.remove("active");
+    });
+
+    scontent3.forEach((c, ci) => {
+      if (i === ci) {
+        c.classList.add("active");
+      } else {
+        c.classList.remove("active");
+      }
+    });
+
+    tab.classList.add("active");
+  });
+});
+
+// const tabsL1 = document.querySelectorAll(".tab-categories button");
+// console.log(tabsL1)
+// const scontent4 = document.querySelectorAll(".leaderboard-content-talent .leaderboard-wrapper .l-round2 ");
+// console.log(scontent4)
+// tabsL1.forEach((tab, i) => {
+//   tab.addEventListener("click", () => {
+//     tabsL1.forEach((t) => {
+//       t.classList.remove("active");
+//     });
+
+//     scontent4.forEach((c, ci) => {
+//       if (i === ci) {
+//         c.classList.add("active");
+//       } else {
+//         c.classList.remove("active");
+//       }
+//     });
+
+//     tab.classList.add("active");
+//   });
+// });
+
+// Get User 
+async function getUserImageUrl(userId) {
+  const res = await fetch(
+    `https://www.streamkarlive.live/meShow/entrance?parameter=%7B%22FuncTag%22:10005044,%22userId%22:${userId}%7D`
+  );
+  const data = await res.json();
+  if (data && data.portrait_path_original)
+    return data.portrait_path_original + "!256";
+  else return "";
+}
+
+
+
+// Fetching schedule data from spreadsheet.
+
+let SHEET_ID = "1GoCTAdP_gpgf8vZv0MPGGj2GFGUxiCNqpppWBs0C4yQ";
+let SHEET_TITLE = "test_event";
+
+let SHEET_RANGE = "A34:C43";
+
+let URL =
+  "https://docs.google.com/spreadsheets/d/" +
+  SHEET_ID +
+  "/gviz/tq?sheet=" +
+  SHEET_TITLE +
+  "&range=";
+
+console.log(URL);
+
+async function fetchSheetData(sheet_range) {
+  try {
+    const res = await fetch(`${URL}${sheet_range}`);
+    const data = await res.text();
+    return JSON.parse(data.substring(47).slice(0, -2));
+  } catch (e) {
+    return null;
+  }
+}
+
+
+
+async function renderLeaderboardData(data, name, roundNumber,category) {
+  const top3 = data.rows.slice(0, 3);
+  console.log(top3);
+  const toppers =
+    name === "user"
+      ? document.querySelectorAll(
+          `.leaderboard-content-user .l-round${roundNumber} .topper-container .top`
+        )
+      : document.querySelectorAll(
+          `#${category}-${roundNumber} .top`
+        );
+  
+  toppers.forEach(async (topper, i) => {
+    const current = top3[i].c;
+    const name = topper.querySelector(".name");
+    const avatar = topper.querySelector("img");
+    const userImageUrl = await getUserImageUrl(current[1].v);
+    avatar.setAttribute("src", userImageUrl);
+    const id = topper.querySelector(".id");
+    const beans = topper.querySelector(".beans");
+
+    name.innerHTML = current[0].v;
+    id.innerHTML = current[1].v;
+    beans.innerText = current[2].v || 0;
+  });
+
+  const winnerContainer =
+    name === "user"
+      ? document.querySelector(
+          `.leaderboard-content-user .l-round${roundNumber} .winner-container`
+        )
+      : document.querySelector(
+          `#${category}-${roundNumber} .winner-container`
+        );
+        
+    console.log(winnerContainer);
+  const winnerStripTemplate = document.querySelector("#winner-strip");
+ 
+  for (let i = 3; i < data.rows.length; i++) {
+    const current = data.rows[i].c;
+    // console.log(current);
+    const winnerStrip = winnerStripTemplate.content.cloneNode(true);
+    const position = winnerStrip.querySelector(".position");
+
+    position.innerHTML = i + 1;
+
+    const avatarContainer = winnerStrip.querySelector(".avatar");
+    avatarContainer.style.overflow = "hidden";
+    const avatar = avatarContainer.querySelector("img");
+    const userImageUrl = await getUserImageUrl(current[1].v);
+    avatar.setAttribute("src", userImageUrl);
+
+    const name = winnerStrip.querySelector(".name");
+    name.innerHTML = current[0].v;
+
+    const id = winnerStrip.querySelector(".id");
+    id.innerHTML = current[1].v;
+
+    // beanImg.src=
+
+    const beans = winnerStrip.querySelector(".beans");
+    beans.innerHTML = current[2].v || 0;
+    winnerContainer.appendChild(winnerStrip);
+  }
+}
+
+async function init() {
+  const leaderboardData = await fetchSheetData("A101:C110");
+  const leaderboardDataS1 = await fetchSheetData("A130:C143");
+  const leaderboardDataF1 = await fetchSheetData("A115:C126");
+  
+  renderLeaderboardData(leaderboardData.table, "user", "1");
+  renderLeaderboardData(leaderboardDataF1.table,"talent",'1','fashion');
+  renderLeaderboardData(leaderboardDataS1.table,"talent",'1','singing');
+
+
+}
+
+init();

@@ -1,100 +1,100 @@
 body {
-    background-image: url("../assets/bg.jpg");
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    margin: 0;
-    padding: 0;
-  }
-  header {
-    position: relative;
-  }
-  
-  header img {
-    width: 100%;
-  }
-  
-  .guide-button {
-    position: absolute;
-    border: 0;
-    outline: none;
-    background: none;
-    width: 8.5vw;
-    height: 20px;
-    top: 57%;
-    padding: 0;
-    right: 0;
-    z-index: 999;
-  }
-  .guide-button img {
-    width: 100%;
-  }
-  
-  /* ---- Modal UI ---- */
+  background-image: url("../assets/bg.jpg");
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 0;
+  padding: 0;
+}
+header {
+  position: relative;
+}
+
+header img {
+  width: 100%;
+}
+
+.guide-button {
+  position: absolute;
+  border: 0;
+  outline: none;
+  background: none;
+  width: 8.5vw;
+  height: 20px;
+  top: 57%;
+  padding: 0;
+  right: 0;
+  z-index: 999;
+}
+.guide-button img {
+  width: 100%;
+}
+
+/* ---- Modal UI ---- */
 
 #modal {
-    /* padding: 3rem;
+  /* padding: 3rem;
         position: absolute;
         top: 25%;
         left: 20%;
         max-width: 210px; */
-    /* background: url('assets/HTP\ BG.png');
+  /* background: url('assets/HTP\ BG.png');
         background-size: cover;
         background-repeat: no-repeat; */
-    border: 0;
-    background: transparent;
-    width: 100%;
-    margin: auto;
-  }
-  
-  .close {
-    right: 45%;
-    background: none;
-    border: 0;
-    outline: 0;
-    position: absolute;
-    width: 13vw;
-    bottom: 0;
-  }
-  .close img {
-    width: 100%;
-  }
-  
-  ::backdrop {
-    background-color: #232323;
-    opacity: 0.75;
-  }
-  
-  .howToPlay {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: url("../assets/Event-Details.png");
-    background-size: 100% 100%;
-    min-height: 55vh;
-    justify-content: center;
-    background-repeat: no-repeat;
-    padding: 9vw 0;
-  }
-  .howToPlay img {
-    width: 50%;
-  }
+  border: 0;
+  background: transparent;
+  width: 100%;
+  margin: auto;
+}
 
-  .howToPlay ul {
-    max-width: 55vw;
-    max-height: 400px;
-    overflow-y: auto;
-    color: #000;
-    padding-inline: 0;
-  }
-  ul li {
-    padding: 1vh 0;
-    list-style: none;
-    font-size: 3vw;
-  }
-  
-  /* ----- Modal UI ends ----- */
-  
+.close {
+  right: 45%;
+  background: none;
+  border: 0;
+  outline: 0;
+  position: absolute;
+  width: 13vw;
+  bottom: 0;
+}
+.close img {
+  width: 100%;
+}
+
+::backdrop {
+  background-color: #232323;
+  opacity: 0.75;
+}
+
+.howToPlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("../assets/Event-Details.png");
+  background-size: 100% 100%;
+  min-height: 55vh;
+  justify-content: center;
+  background-repeat: no-repeat;
+  padding: 9vw 0;
+}
+.howToPlay img {
+  width: 50%;
+}
+
+.howToPlay ul {
+  max-width: 55vw;
+  max-height: 400px;
+  overflow-y: auto;
+  color: #000;
+  padding-inline: 0;
+}
+ul li {
+  padding: 1vh 0;
+  list-style: none;
+  font-size: 3vw;
+}
+
+/* ----- Modal UI ends ----- */
+
 /* --- Round-btns --- */
 
 .round-btns,
@@ -145,20 +145,19 @@ body {
   background-repeat: no-repeat;
 }
 
-  /* *-----*   Rewards section  *------* */
+/* *-----*   Rewards section  *------* */
 
+button {
+  background: none;
+  outline: none;
+  box-shadow: none;
+  border: 0;
+}
 
-  button {
-    background: none;
-    outline: none;
-    box-shadow: none;
-    border: 0;
-  }
-
-  .tab-btns-section{
-    margin-top: -15vw;
-  }
-  .tab-btns,
+.tab-btns-section {
+  margin-top: -15vw;
+}
+.tab-btns,
 .tab-btns-leaderboard {
   background-image: url("../assets/User\ Talent\ slider\ bg.png");
   background-size: 100% 100%;
@@ -171,7 +170,8 @@ body {
 }
 .tab,
 .tab2,
-.tab3,.tabL {
+.tab3,
+.tabL {
   width: 52%;
   /* height: 110%; */
   transform: scale(1.1);
@@ -190,7 +190,6 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 95%;
 }
-
 
 .tab-content,
 .tab-schedule-content {
@@ -344,24 +343,26 @@ body {
   height: 10vw;
   margin-top: 4px;
 }
-.dancing.active, .tab-categories .dancingL.active{
+/* .dancing.active,
+.tab-categories .dancingL.active {
   background: url("./assets/img/btn/Dance btn.png") center/100% 100% no-repeat;
 
   transform: scale(1.2);
-}
-.singing.active,.tab-categories .singingL.active{
+} */
+/* .singing.active,
+.tab-categories .singing.active {
   background: url("./assets/img/btn/Singing battle btn.png") center/100% 100%
     no-repeat;
   transform: scale(1.2);
 }
-.fashion.active,.tab-categories .fashionL.active {
+.fashion.active,
+.tab-categories .fashion.active {
   background: url("./assets/img/btn/fashion battle btn.png") center/100% 100%
     no-repeat;
   transform: scale(1.2);
-}
+} */
 
 /* ----- Reward section styling ----- */
-
 
 /* -----Schedule section styling----- */
 
@@ -369,7 +370,8 @@ body {
   margin-top: 25vw;
 }
 
-.tab-btns-schedule , .tab-categories{
+.tab-btns-schedule,
+.tab-categories {
   background: url("../assets/Slide\ button\ bg.png") center/100% 100% no-repeat;
   width: 70%;
   height: 12vw;
@@ -381,12 +383,21 @@ body {
   margin-bottom: 3vw;
 }
 
-.singing.active {
+.singing.active{
+  background: url("../assets/Singing-Battle.png") center/100% 100% no-repeat;
+  transform: scale(1.3);
+}
+
+.tab-categories .singingL.active{
   background: url("../assets/Singing-Battle.png") center/100% 100% no-repeat;
   transform: scale(1.3);
 }
 
 .fashion.active {
+  background: url("../assets/Shayari-Battle.png") center/100% 100% no-repeat;
+  transform: scale(1.3);
+}
+.tab-categories .fashionL.active{
   background: url("../assets/Shayari-Battle.png") center/100% 100% no-repeat;
   transform: scale(1.3);
 }
@@ -470,6 +481,200 @@ body {
   text-align: center;
 }
 
+/* ---- Leaderboard section ---- */
+
+.leaderboard-section {
+  padding: 5vw 0;
+}
+.leaderboard-content {
+  padding-top: 4vw;
+}
+.leaderboard-content-user,
+.leaderboard-content-talent {
+  display: none;
+}
+.leaderboard-content-user.active,
+.leaderboard-content-talent.active {
+  display: block;
+}
+
+.leaderboard {
+  display: none;
+}
+
+.leaderboard.active {
+  background: url("../assets/Leaderboard.png") center/100% 100% no-repeat;
+  /* min-height: 88vh; */
+  width: 100%;
+  margin: auto;
+  margin-top: 30px;
+  position: relative;
+  display: block;
+  padding: 0.5vw 0;
+}
+
+.beans-amount {
+  max-width: 50%;
+  margin: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 22vw;
+}
+.beans-amount img {
+  width: 100%;
+}
+.beans-amount span {
+  position: absolute;
+  color: #fff;
+  margin-left: 6vw;
+  font-size: 5vw;
+  font-weight: 600;
+}
+
+.topper-container {
+  display: flex;
+  width: 73%;
+  gap: 1vw;
+  margin: auto;
+  margin-top: 10px;
+  background: url("../img/rank\ bg.png") center/100% 100% no-repeat;
+  padding: 2vw;
+}
+.topper-container .top {
+  height: 28vw;
+  width: 72%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  color: #fff;
+  padding-inline: 3vw;
+  gap: 3px;
+  background: url("../assets/Pink-Frame.png") center/100% 100% no-repeat;
+  font-size: 3vw;
+  overflow: hidden;
+}
+.topper-container .top-1 {
+  order: 2;
+}
+.top-1 .avatar,
+.top-2 .avatar,
+.top-3 .avatar {
+  /* background: url("../assets/Gold.png") center/100% 100% no-repeat; */
+  overflow: hidden;
+  padding: 3vw 2vw 2.5vw 2.25vw;
+}
+.top .avatar img {
+  border-radius: 50%;
+  object-fit: contain;
+}
+.topper-container .top-2 {
+  margin-top: 18%;
+  order: 1;
+}
+.top-2 .avatar {
+  /* background: url("../assets/Silver.png") center/100% 100% no-repeat; */
+  overflow: hidden;
+}
+
+.topper-container .top-3 {
+  margin-top: 18%;
+  order: 3;
+}
+.top-3 .avatar {
+  /* background: url("../assets/Brown-Frame.png") center/100% 100% no-repeat; */
+  overflow: hidden;
+}
+.avatar {
+  max-width: 10vw;
+  max-height: 10vw;
+  border-radius: 50%;
+  margin: auto;
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1/1;
+}
+
+.top .avatar {
+  width: 120px;
+  max-height: 36px;
+  min-height: 36px;
+}
+
+.winner-container .avatar {
+  width: 6vw;
+  height: 6vw;
+  border-radius: 50%;
+  border: 1px solid goldenrod;
+  background: black;
+}
+.info {
+  margin-bottom: 3vw;
+  font-size: 2.4vw;
+  display: flex;
+  flex-direction: column;
+  font-style: italic;
+  color: white;
+  font-weight: 600;
+}
+.info .name {
+  text-wrap: nowrap;
+}
+.info .beans-container {
+  margin-top: 0.5vw;
+  display: flex;
+  gap: 1vw;
+}
+.info .beans-container .bean-img {
+  max-width: 5vw;
+  max-height: 3vw;
+}
+
+.winner-container {
+  display: flex;
+  flex-direction: column;
+  width: 68%;
+  /* height: 450px; */
+  align-items: center;
+
+  margin-top: 16px;
+  padding-inline: 16px;
+  gap: 8px;
+  margin-bottom: 32px;
+  padding-bottom: 47px;
+  margin-inline: auto;
+}
+
+.winner-strip {
+  color: #fff;
+  display: flex;
+  width: 100%;
+  /* min-height: 40px; */
+  align-items: center;
+  padding-inline: 14px;
+  padding-bottom: 2vw;
+  background: url("../assets/schedule\ strip.png") center/100% 100% no-repeat;
+  gap: 1em;
+  padding-top: 1vw;
+  border-radius: 3.5vw;
+}
+
+.winner-strip .info {
+  flex: 1;
+  color: #fff;
+}
+
+.winner-strip .info .beans-container {
+  display: flex !important;
+  gap: 1vw;
+  background: #232323;
+}
+.winner-strip .info .beans-container .bean-img {
+  max-width: 5vw !important;
+}
 
 /* Footer */
 
